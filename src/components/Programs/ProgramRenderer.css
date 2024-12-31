@@ -1,0 +1,51 @@
+.program {
+    margin-top: 100px;
+    padding: 2% 5%;
+}
+
+.program h1 {
+    color: #C21717;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.program_desc {
+    margin-bottom: 20px;
+    line-height: 150%;
+    text-align: justify;
+}
+
+.program h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.program h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.content_gallery {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+    .content_gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 420px) {
+    .program {
+        margin-top: 80px;
+    }
+    .content_gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

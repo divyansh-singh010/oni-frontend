@@ -1,0 +1,254 @@
+.about_film {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.background_video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+.main_video {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.fullscreen {
+  position: absolute;
+  right: -30px;
+  bottom: 20px;
+  width: 25px;
+  height: 25px;
+  z-index: 3;
+  opacity: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.fullscreen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about_film:hover > .fullscreen {
+  opacity: 1;
+  right: 20px;
+}
+
+.about_text {
+  padding: 3% 5%;
+  line-height: 150%;
+  font-weight: 500;
+  color: #999;
+  text-align: justify;
+}
+
+.about_timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3% 10%;
+}
+
+.timeline_line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background-color: #f7f7f7;
+  height: 100%;
+}
+
+.timeline_box {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  height: max-content;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.13);
+  padding: 20px;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+.timeline_box:nth-child(2n + 1) {
+  margin-top: 75px;
+}
+
+.timeline_box img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.timeline_box h4 {
+  font-size: 1.5rem;
+}
+
+.timeline_box p {
+  font-size: 1rem;
+  color: #999;
+  line-height: 150%;
+}
+
+.timeline_box:hover {
+  border: 1px solid #c21717;
+}
+
+.timeline_connector {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: calc(12.5% - 15px);
+  top: 10%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.timeline_connector_right {
+  right: calc(-12.5% + 20px);
+}
+
+.timeline_connector_left {
+  left: calc(-12.5% + 20px);
+}
+
+.connector_circle {
+  width: 10px;
+  height: 10px;
+  background-color: #999;
+  border-radius: 50%;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.connector_line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+  left: 5%;
+  height: 3px;
+  background-color: #999;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.timeline_box:hover > .timeline_connector > .connector_circle {
+  background-color: #c21717;
+}
+
+.timeline_box:hover > .timeline_connector > .connector_line {
+  background-color: #c21717;
+}
+
+.about_gallery {
+  padding: 0% 5% 3% 5%;
+}
+
+.about_gallery h3 {
+  font-size: 1.5rem;
+  color: #404040;
+  font-weight: 600;
+}
+
+.about_gallery_images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
+}
+
+.about_gallery_image {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.about_gallery_image img {
+  width: 90%;
+}
+
+.about_gallery_image_expand_btn {
+  position: absolute;
+  top: -50px;
+  right: 40px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.about_gallery_image_expand_btn img {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.about_gallery_image:hover > .about_gallery_image_expand_btn {
+  top: 20px;
+}
+
+.about_gallery_image_expand_btn:hover {
+  background-color: #c21717;
+}
+
+.about_gallery_image_expand_btn:hover > img {
+  filter: invert(1);
+}
+
+@media (max-width: 768px) {
+  .about_film {
+    height: 25vh;
+  }
+  .main_video {
+    width: 100%;
+    height: auto;
+  }
+  .about_gallery_images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .about_film {
+    margin-top: 60px;
+  }
+  .about_timeline {
+    grid-template-columns: 1fr;
+  }
+  .timeline_line {
+    display: none;
+  }
+  .timeline_connector {
+    display: none;
+  }
+  .timeline_box {
+    margin-top: 30px !important;
+  }
+  .about_gallery_images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

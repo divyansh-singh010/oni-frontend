@@ -1,0 +1,144 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3% 5%;
+    background-color: #C21717;
+}
+
+.footer_logo {
+    width: 30%;
+}
+
+.footer_logo img {
+    width: 100%;
+}
+
+.footer_social {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin-top: 1em;
+}
+
+.footer_social a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer_social img {
+    width: 25px;
+}
+
+.footer_navs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 65%;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_links h4 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+.footer_links a {
+    color: #FFC8C8;
+    width: max-content;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.contact_link {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.contact_link img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.contact_link p {
+    color: #FFC8C8;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 1em;
+    line-height: 150%;
+}
+
+.footer_links:nth-child(1), .footer_links:nth-child(2) {
+    width: 30%;
+}
+
+.footer_links:nth-child(3) {
+    width: 40%;
+}
+
+.footer_bar {
+    background-color: #1A1A1A;
+    padding: max(1%, 5px) 5%;
+    text-align: center;
+}
+
+.footer_bar p {
+    margin: 0;
+    color: #AAAAAA;
+}
+
+.footer_bar p span {
+    color: white;
+    font-weight: 600;
+}
+
+@media (max-width: 1080px) {
+    .footer {
+        flex-direction: column;
+    }
+    .footer_logo, .footer_navs {
+        width: 100%;
+    }
+    .footer_logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+    .footer_logo a:first-child {
+        width: max(40%, 320px);
+    }
+    .footer_social {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer_logo {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    .footer_social {
+        margin: auto;
+        margin-top: 10px;
+    }
+    .footer_navs {
+        flex-wrap: wrap;
+    }
+    .footer_links:nth-child(1), .footer_links:nth-child(2) {
+        width: 50%;
+    }
+    .footer_links:nth-child(3) {
+        width: 100%;
+    }
+}

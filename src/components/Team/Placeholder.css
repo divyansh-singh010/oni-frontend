@@ -1,0 +1,49 @@
+.placeholder {
+  position: relative;
+  width: 100%;
+  height: 275px;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.placeholder::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, #a50b02, rgba(255, 0, 0, 0));
+  pointer-events: none;
+}
+
+.placeholder-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  bottom: 2.5px;
+  left: 2px;
+  margin: 20px;
+  color: #f0f0f0;
+}
+.placeholder-name {
+  margin-bottom: 5px;
+  font-weight: 550;
+  font-size: x-large;
+}
+.placeholder-position {
+  width: 100%;
+  font-weight: 200;
+  font-size: medium;
+}
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}

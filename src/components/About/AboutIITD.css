@@ -1,0 +1,182 @@
+.about_iitd {
+  padding: 7% max(5%, 20px);
+  background-color: #f5f5f5;
+}
+
+.about_iitd h2 {
+  font-size: 2rem;
+}
+
+.about_iitd_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about_iitd_container_new {
+  border: 10px;
+  border-color: #c21717;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.about_iit_subcontainer {
+  display: flex;
+  height: 625px;
+  flex-direction: column;
+  line-height: 1.25;
+  font-weight: 500;
+  font-size: large;
+  padding: 0 5%;
+  width: 40%;
+  text-align: start;
+}
+
+.about_iit_subcontainer_name {
+  margin: 40px;
+  text-align: end;
+  font-weight: 500;
+  color: black;
+}
+
+.about_iit_subcontainer img {
+  width: 60%;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  margin: 0 auto 40px auto;
+}
+
+.about_iitd_container_heading {
+  font-size: 2.5rem !important;
+  font-weight: 600;
+  color: #c21717;
+  margin-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 50px auto;
+}
+
+.about_iitd_container_new_hr {
+  width: 5px;
+  height: 550px;
+  background: #c21717;
+  border-radius: 10px;
+}
+
+.about_iitd_text {
+  width: 60%;
+  line-height: 1.65;
+  margin-right: 20px;
+  font-size: medium;
+  text-align: start;
+}
+
+.about_iitd_image_carousel {
+  width: max(30%, 400px);
+  height: 500px;
+  position: relative;
+}
+
+.about_iitd_image_carousel iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+.about_iitd_text li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+
+/* For medium screens */
+@media (max-width: 1080px) {
+  .about_iitd_container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about_iitd_container_new {
+    flex-direction: column; /* Stack subcontainers vertically */
+    align-items: center;   /* Center the content */
+    margin-bottom: 50px;   /* Reduce the bottom margin */
+  }
+
+  .about_iitd_container_new_hr {
+    width: 90%;           /* Adjust width for the horizontal divider */
+    height: 5px;          /* Turn it into a horizontal line */
+    margin: 20px 0;       /* Add spacing around it */
+  }
+
+  .about_iit_subcontainer {
+    width: 80%;           /* Adjust width for medium screens */
+  }
+
+  .about_iitd_image_carousel {
+    width: 80%;
+    height: 350px; /* Adjust height for medium screens */
+    margin-top: 20px;
+  }
+
+  .about_iitd_text {
+    width: 90%;
+    margin-right: 0;
+  }
+}
+
+/* For small screens */
+@media (max-width: 600px) {
+  .about_iitd_container_new {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .about_iit_subcontainer {
+    width: 90%;           /* Full width for better readability */
+    text-align: center;   /* Center-align text */
+    padding: 10px;        /* Reduce padding */
+  }
+
+  .about_iit_subcontainer img {
+    width: 50%;           /* Smaller image size */
+    margin-bottom: 20px;  /* Adjust spacing */
+  }
+
+  .about_iit_subcontainer_name {
+    margin: 20px;         /* Reduce margin */
+    text-align: center;   /* Center-align text */
+  }
+
+  .about_iitd_container_new_hr {
+    width: 80%;           /* Adjust width */
+    height: 3px;          /* Make it thinner */
+  }
+
+  .about_iitd_image_carousel {
+    width: 100%;
+    height: 300px; /* Adjust for small screens */
+    margin-top: 20px;
+  }
+
+  .about_iitd h2 {
+    margin: auto;
+    text-align: center;
+  }
+
+  .about_iitd_text li {
+    font-size: 1rem;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .about_iitd_text {
+    font-size: 1rem;
+    text-align: left;
+  }
+}

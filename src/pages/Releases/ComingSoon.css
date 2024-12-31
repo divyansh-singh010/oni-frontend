@@ -1,0 +1,17 @@
+.coming_soon {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.coming_soon img {
+    width: max(320px, 40%);
+}
+
+@media (max-width: 420px) {
+    .coming_soon {
+        margin-top: 60px;
+    }
+}

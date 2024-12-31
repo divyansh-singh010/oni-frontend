@@ -1,0 +1,52 @@
+.distinguished_alumni {
+    padding: max(5%, 20px);
+    padding-top: 0;
+}
+
+.distinguished_alumni h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.alumni_card {
+    position: relative;
+    width: 90%;
+    background-color: green;
+    margin: auto;
+}
+
+.alumni_card img {
+    width: 100%;
+}
+
+.almuni_detail {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;
+    height: 40px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.almuni_detail h4 {
+    margin: 10px 0;
+    color: #C21717;
+}
+
+.almuni_detail p {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #000;
+}
+
+.alumni_card:hover > .almuni_detail {
+    height: 70%;
+    opacity: 0.9;
+}
